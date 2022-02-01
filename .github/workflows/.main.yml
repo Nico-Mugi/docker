@@ -26,4 +26,4 @@ jobs:
 
       #finally build your app with the latest command
       - name: Build and test with Maven
-        run: cd docker/backend/simple-api & mvn clean verify
+        run: mvn clean verify --file ./../../backend/simple-api
