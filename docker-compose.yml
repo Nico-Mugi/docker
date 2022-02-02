@@ -14,9 +14,9 @@ services:
     networks:
       - app-network
 
-  frontend:
+  httpd:
     build:
-      ./frontend
+      ./httpd
     ports:
       - 82:80
     networks:
