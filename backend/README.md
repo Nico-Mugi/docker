@@ -1,5 +1,5 @@
 # V1 avec uniquement le Main 
-```
+```Dockerfile
 FROM openjdk:11   
 #import openjdk
 COPY Main.java . 
@@ -15,7 +15,7 @@ CMD ["java", "Main"]
 ``docker run -d --network=app-network -p 8081:8080 --name backend nicolastvn/backend``
 
 # V2 avec simple-api
-```
+```Dockerfile
 #Use maven image and call it myapp-build
 FROM maven:3.6.3-jdk-11 AS myapp-build
 
