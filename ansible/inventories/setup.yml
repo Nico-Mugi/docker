@@ -4,4 +4,4 @@ all:
     ansible_ssh_private_key_file: ../../id_rsa
   children:
     prod:
-      hosts: centos@nicolas.thouvenin.takima.cloud
+      hosts: nicolas.thouvenin.takima.cloud

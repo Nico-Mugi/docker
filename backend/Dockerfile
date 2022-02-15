@@ -22,6 +22,7 @@ COPY --from=myapp-build $MYAPP_HOME/target/*.jar $MYAPP_HOME/myapp.jar
 #run api at startup
 ENTRYPOINT java -jar myapp.jar
 
+# OLD MAIN :
 # FROM openjdk:11
 # COPY Main.java .
 # RUN javac Main.java

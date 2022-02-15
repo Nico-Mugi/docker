@@ -1,0 +1,10 @@
+---
+# tasks file for roles/front
+
+- name: Launch frontend
+  docker_container:
+    name: front
+    image: nicolastvn/tp-devops-cpe-front
+    state: started
+    networks:
+      - name: app-network
