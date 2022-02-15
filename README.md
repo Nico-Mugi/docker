@@ -118,7 +118,7 @@ jobs:
         # Note: tags has to be all lower-case
           tags: ${{secrets.DOCKERHUB_USERNAME}}/tp-devops-cpe-backend
           # build on feature branches, push only on main branch
-          push: true
+          push: ${{ github.ref == 'refs/heads/main' }}
       - name: Build image and push database
         uses: docker/build-push-action@v2
         with:
@@ -127,7 +127,7 @@ jobs:
         # Note: tags has to be all lower-case
           tags: ${{secrets.DOCKERHUB_USERNAME}}/tp-devops-cpe-database
           # build on feature branches, push only on main branch
-          push: true
+          push: ${{ github.ref == 'refs/heads/main' }}
 
       - name: Build image and push httpd
         uses: docker/build-push-action@v2
@@ -137,5 +137,5 @@ jobs:
         # Note: tags has to be all lower-case
           tags: ${{secrets.DOCKERHUB_USERNAME}}/tp-devops-cpe-httpd
           # build on feature branches, push only on main branch
-          push: true
+          push: ${{ github.ref == 'refs/heads/main' }}
 ```
